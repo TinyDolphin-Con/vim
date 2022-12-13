@@ -1,0 +1,288 @@
+# A valid snippet should starts with:
+#
+#               snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#               endsnippet
+#
+# Snippet options:
+#
+#               b - Beginning of line.
+#               i - In-word expansion.
+#               w - Word boundary.
+#               r - Regular expression
+#               e - Custom context snippet
+#               A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#               snippet emitter "emitter properties" b
+#               private readonly ${1} = new Emitter<$2>()
+#               public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#               endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+priority -50
+
+extends c
+
+# We want to overwrite everything in parent ft.
+priority -49
+snippet leetcode
+// c++ stl libraries
+#include <algorithm>
+#include <deque>
+#include <iostream>
+#include <iterator>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
+// c libraries
+#include <cassert>
+#include <cctype>
+#include <climits>
+#include <cmath>
+#include <cstring>
+
+#if DEBUG_SWITCH
+// doctest：参考 https://github.com/doctest/doctest/blob/master/doc/markdown/testcases.md
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+#endif
+
+using namespace std;
+
+#ifdef __GCC__
+#pragma GCC optimize(2)
+#endif
+
+// g++ -Wall -lpthread -g -std=c++11 -D DEBUG_SWITCH main.cpp -o main && ./main
+#if DEBUG_SWITCH
+#define _debug(x)                                                              \
+  std::cout << "[ DEBUG ] " << __func__ << "() @ " << __TIMESTAMP__ << "\n"    \
+            << __FILE__ << " L" << __LINE__ << "\n"                            \
+            << #x " = " << (x) << std::endl;
+#define _debug_vec(vec)                                                        \
+  do {                                                                         \
+    std::cout << "[ DEBUG_VEC ] " << __func__ << "() @ " << __TIMESTAMP__      \
+              << "\n"                                                          \
+              << __FILE__ << " L" << __LINE__ << "\n";                         \
+    std::cout << #vec " = [";                                                  \
+    std::for_each(vec.begin(), vec.end(),                                      \
+                  [](const auto &v) { std::cout << v << ", "; });              \
+    std::cout << "\b\b]";                                                      \
+    std::cout << std::endl;                                                    \
+  } while (0)
+#define _debug_time()                                                          \
+  std::cout << "[ DEBUG_TIME ] " << __func__ << "() @ " << __TIMESTAMP__       \
+            << "\n"                                                            \
+            << __FILE__ << " L" << __LINE__ << "\n"                            \
+            << "Time used(s) = " << ((double)clock() / CLOCKS_PER_SEC)         \
+            << std::endl;
+#else
+#define _debug(x)
+#define _debug_vec(vec)
+#define _debug_time()
+#endif
+
+#define _ ios_base::sync_with_stdio(0), cin.tie(0)
+
+#define _for(i, a, b) for (int i = (a); i < (b); ++i)
+#define _rof(i, a, b) for (int i = (b - 1); i >= (a); --i)
+#define _rep(i, a, b) for (int i = (a); i <= (b); ++i)
+#define _per(i, a, b) for (int i = (b); i >= (a); --i)
+#define _tra(v, x) for (auto &v : x)
+#define _all(x) x.begin(), x.end()
+#define _sz(x) (int)(x).size()
+
+typedef long long LL;
+typedef unsigned long long ULL;
+typedef long double LD;
+typedef pair<int, int> PII;
+typedef pair<LL, LL> PLL;
+typedef vector<int> VI;
+
+const int INF = 0x3f3f3f3f;
+const int NINF = 0xc0c0c0c0;
+const int N = 1e6 + 10;
+
+class Solution {
+public:
+  int Func() { return 0; }
+};
+
+#if DEBUG_SWITCH
+
+TEST_CASE("TEST CASE with TITLE") {
+  SUBCASE("SUBCASE 01 whit TITLE") {
+    CHECK(Solution().Func() == 0);
+  }
+
+  SUBCASE("SUBCASE 02 whit TITLE") {
+    CHECK(Solution().Func() == 0);
+  }
+}
+TEST_CASE("TEST CASE with DEBUG") {
+  SUBCASE("SUBCASE 01 whit DEBUG") {
+    CHECK(Solution().Func() == 0);
+  }
+}
+
+#endif
+
+// g++ -Wall -lpthread -g -std=c++20 -D DEBUG_SWITCH main.cpp -o main && ./main
+// clang -Wall -lstdc++ -lpthread -g -std=c++20 -D DEBUG_SWITCH main.cpp -o main && ./main
+endsnippet
+
+# We want to overwrite everything in parent ft.
+priority -48
+snippet treenode
+// c++ stl libraries
+#include <algorithm>
+#include <deque>
+#include <iostream>
+#include <iterator>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
+// c libraries
+#include <cassert>
+#include <cctype>
+#include <climits>
+#include <cmath>
+#include <cstring>
+
+#if DEBUG_SWITCH
+// doctest：参考
+// https://github.com/doctest/doctest/blob/master/doc/markdown/testcases.md
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+#endif
+
+using namespace std;
+
+#ifdef __GCC__
+#pragma GCC optimize(2)
+#endif
+
+// g++ -Wall -lpthread -g -std=c++11 -D DEBUG_SWITCH main.cpp -o main && ./main
+#if DEBUG_SWITCH
+#define _debug(x)                                                              \
+  std::cout << "[ DEBUG ] " << __func__ << "() @ " << __TIMESTAMP__ << "\n"    \
+            << __FILE__ << " L" << __LINE__ << "\n"                            \
+            << #x " = " << (x) << std::endl;
+#define _debug_vec(vec)                                                        \
+  do {                                                                         \
+    std::cout << "[ DEBUG_VEC ] " << __func__ << "() @ " << __TIMESTAMP__      \
+              << "\n"                                                          \
+              << __FILE__ << " L" << __LINE__ << "\n";                         \
+    std::cout << #vec " = [";                                                  \
+    std::for_each(vec.begin(), vec.end(),                                      \
+                  [](const auto &v) { std::cout << v << ", "; });              \
+    std::cout << "\b\b]";                                                      \
+    std::cout << std::endl;                                                    \
+  } while (0)
+#define _debug_time()                                                          \
+  std::cout << "[ DEBUG_TIME ] " << __func__ << "() @ " << __TIMESTAMP__       \
+            << "\n"                                                            \
+            << __FILE__ << " L" << __LINE__ << "\n"                            \
+            << "Time used(s) = " << ((double)clock() / CLOCKS_PER_SEC)         \
+            << std::endl;
+#else
+#define _debug(x)
+#define _debug_vec(vec)
+#define _debug_time()
+#endif
+
+#define _ ios_base::sync_with_stdio(0), cin.tie(0)
+
+#define _for(i, a, b) for (int i = (a); i < (b); ++i)
+#define _rof(i, a, b) for (int i = (b - 1); i >= (a); --i)
+#define _rep(i, a, b) for (int i = (a); i <= (b); ++i)
+#define _per(i, a, b) for (int i = (b); i >= (a); --i)
+#define _tra(v, x) for (auto &v : x)
+#define _all(x) x.begin(), x.end()
+#define _sz(x) (int)(x).size()
+
+typedef long long LL;
+typedef unsigned long long ULL;
+typedef long double LD;
+typedef pair<int, int> PII;
+typedef pair<LL, LL> PLL;
+typedef vector<int> VI;
+
+const int INF = 0x3f3f3f3f;
+const int NINF = 0xc0c0c0c0;
+const int N = 1e6 + 10;
+
+struct TreeNode {
+  int val;
+  TreeNode *left;
+  TreeNode *right;
+  TreeNode() : val(0), left(nullptr), right(nullptr) {}
+  TreeNode(int val_) : val(val_), left(nullptr), right(nullptr) {}
+  TreeNode(int val_, TreeNode *left_, TreeNode *right_)
+      : val(val_), left(left_), right(right_) {}
+};
+
+// 递归构建二叉树（下标从 1 开始）
+// 输入数组要求：完全二叉树形式（空结点用 NINF 补充）
+TreeNode *ConstructTree(vector<int> &nums, int index) {
+  TreeNode *root = nullptr;
+  // 空节点值：NINF
+  if (index < (int)nums.size() && nums[index] != NINF) {
+    root = new TreeNode(nums[index]);
+    root->left = ConstructTree(nums, 2 * index);
+    root->right = ConstructTree(nums, 2 * index + 1);
+  }
+  return root;
+}
+
+class Solution {
+public:
+  bool func(TreeNode *root) { return true; }
+};
+
+#if DEBUG_SWITCH
+
+TEST_CASE("TEST CASE with TITLE") {
+  SUBCASE("SUBCASE 01 whit TITLE") {
+    // [0] 为数组大小
+    vector<int> nums{7, 1, 2, 2, 3, 4, 4, 3};
+    TreeNode *root = ConstructTree(nums, 1);
+    CHECK(Solution().func(root) == true);
+  }
+
+  SUBCASE("SUBCASE 02 whit TITLE") {
+    vector<int> nums{7, 1, 2, 2, NINF, 3, NINF, 3};
+    TreeNode *root = ConstructTree(nums, 1);
+    CHECK(Solution().func(root) == true);
+  }
+}
+TEST_CASE("TEST CASE with DEBUG") {
+  SUBCASE("SUBCASE 01 whit DEBUG") {}
+}
+
+#endif
+
+// g++ -Wall -lpthread -g -std=c++20 -D DEBUG_SWITCH main.cpp -o main && ./main
+// clang -Wall -lstdc++ -lpthread -g -std=c++20 -D DEBUG_SWITCH main.cpp -o main && ./main
+endsnippet
