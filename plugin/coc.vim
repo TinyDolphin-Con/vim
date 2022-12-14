@@ -15,7 +15,7 @@ vim9script
 #
 #  Modify:
 #        Created by TinyDolphin on 2022/12/13
-#        Last Modified: 2022/12/13 12:54:36
+#        Last Modified: 2022/12/14 13:45:41
 #
 #  Sections:
 #     -> neoclide/coc.nvi
@@ -97,7 +97,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 # goto 代码导航（定义、类型、实现、引用等）
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> gtd <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
@@ -117,14 +117,14 @@ endfunction
 # 在 updatetime 时间内没有按键，高亮显示
 # autocmd CursorHold * silent call CocActionAsync('highlight')
 
-# ,rn 触发重命名
-nmap <leader>rn <Plug>(coc-rename)
-# ,rf 重构方法
-nmap <leader>rf <Plug>(coc-refactor)
+# 触发重命名
+nmap <leader>crn <Plug>(coc-rename)
+# 重构方法
+nmap <leader>crf <Plug>(coc-refactor)
 
 # 格式化选中代码
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>cfs  <Plug>(coc-format-selected)
+nmap <leader>cfs  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -145,17 +145,17 @@ augroup end
 
 # 快速选中整个函数或者类
 # 快速选中整个函数（不包括函数名尾）
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
+xmap cfi <Plug>(coc-funcobj-i)
+omap cfi <Plug>(coc-funcobj-i)
 # 快速选中整个函数（包括函数名）
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
+xmap cfa <Plug>(coc-funcobj-a)
+omap cfa <Plug>(coc-funcobj-a)
 # 快速选中整个类（不包括类名）
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
+xmap cci <Plug>(coc-classobj-i)
+omap cci <Plug>(coc-classobj-i)
 # 快速选中整个类（包括类名头尾）
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
+xmap cca <Plug>(coc-classobj-a)
+omap cca <Plug>(coc-classobj-a)
 
 # 滚动浮动窗口或弹出窗口：<C-f>、<C-b>
 nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
@@ -183,19 +183,18 @@ command! -nargs=0 Format :call CocActionAsync('format')
 # set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 # 显示所有诊断信息
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <space>Cd  :<C-u>CocList diagnostics<cr>
 # 管理插件
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <space>Ce  :<C-u>CocList extensions<cr>
 # 显示命令行
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <space>Cc  :<C-u>CocList commands<cr>
 # 显示当前文档的 symbols
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <space>Co  :<C-u>CocList outline<cr>
 # 显示workspace symbols （可查看源码实现）
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <space>Cs  :<C-u>CocList -I symbols<cr>
 # 对下一个做默认操作
-# nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+# nnoremap <silent><nowait> <space>Cn  :<C-u>CocNext<CR>
 # 对上一个做默认操作
-# nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+# nnoremap <silent><nowait> <space>Cp  :<C-u>CocPrev<CR>
 # 恢复最新的 coc list
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
+nnoremap <silent><nowait> <space>CR  :<C-u>CocListResume<CR>
