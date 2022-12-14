@@ -183,18 +183,18 @@ command! -nargs=0 Format :call CocActionAsync('format')
 # set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 # 显示所有诊断信息
-nnoremap <silent><nowait> <space>Cd  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <leader>Cd  :<C-u>CocList diagnostics<cr>
 # 管理插件
-nnoremap <silent><nowait> <space>Ce  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <leader>Ce  :<C-u>CocList extensions<cr>
 # 显示命令行
-nnoremap <silent><nowait> <space>Cc  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <leader>Cc  :<C-u>CocList commands<cr>
 # 显示当前文档的 symbols
-nnoremap <silent><nowait> <space>Co  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <leader>Co  :<C-u>CocList outline<cr>
 # 显示workspace symbols （可查看源码实现）
-nnoremap <silent><nowait> <space>Cs  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <leader>Cs  :<C-u>CocList -I symbols<cr>
 # 对下一个做默认操作
-# nnoremap <silent><nowait> <space>Cn  :<C-u>CocNext<CR>
+# nnoremap <silent><nowait> <leader>Cn  :<C-u>CocNext<CR>
 # 对上一个做默认操作
-# nnoremap <silent><nowait> <space>Cp  :<C-u>CocPrev<CR>
+# nnoremap <silent><nowait> <leader>Cp  :<C-u>CocPrev<CR>
 # 恢复最新的 coc list
-nnoremap <silent><nowait> <space>CR  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <leader>Cr  :<C-u>CocListResume<CR>
