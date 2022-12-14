@@ -97,6 +97,7 @@ Plug 'dense-analysis/ale' # 动态语法检测
 # ##### git 管理
 # plugin/git.vim
 # Plug 'Eliot00/git-lens.vim' # 显示当前行的 commit message（NB：存在问题，会隐藏内容）
+Plug 'mhinz/vim-signify' # 实时显示修改状态
 
 # ##### 任务系统
 # plugin/asynctasks.vim
