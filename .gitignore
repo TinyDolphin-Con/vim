@@ -29,5 +29,7 @@ tags
 *.tar.xz
 *.log
 
+/autoload/*
+/vim-plugs/*
 /temp_dirs/undodir/
 /plugin/test_*
