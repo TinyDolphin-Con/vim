@@ -40,8 +40,8 @@ vim9script
 set updatetime=100
 
 # 修改块之间跳转
-nmap <leader>sn <plug>(signif-next-hunk)
-nmap <leader>sp <plug>(signify-prev-hunk)
+nmap <leader>snh <plug>(signify-next-hunk)
+nmap <leader>sph <plug>(signify-prev-hunk)
 
 # 选中当前修改块的文本
 omap <leader>smi <plug>(signify-motion-inner-pending)
