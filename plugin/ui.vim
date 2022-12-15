@@ -19,6 +19,7 @@ vim9script
 #
 #  Sections:
 #     -> Yggdroot/indentLine
+#     -> skywind3000/vim-preview
 #
 # #############################################################
 
@@ -30,3 +31,11 @@ vim9script
 g:indentLine_color_term = 239
 # 设置缩进对齐线的样式
 # g:indentLine_char = '┆'
+
+
+# #############################################################
+# => Yggdroot/indentLine 缩进对齐线
+# #############################################################
+
+autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>

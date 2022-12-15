@@ -58,6 +58,8 @@ Plug 'kristijanhusak/defx-git'
 Plug 't9md/vim-choosewin' # 选择在哪个窗口打开（文件树中 i 键）
 # plugin/ui.vim
 Plug 'Yggdroot/indentLine' # 缩进对齐线
+# plugin/ui.vim
+Plug 'skywind3000/vim-preview' # 预览窗口
 
 # ##### 颜色主题 plugin/colors.vim
 Plug 'morhetz/gruvbox'
