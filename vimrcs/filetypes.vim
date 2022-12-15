@@ -29,9 +29,9 @@ vim9script
 # #############################################################
 
 # 为 C++ 添加注释
-autocmd FileType c,cpp,python,vim set foldmethod=indent nofoldenable
+autocmd FileType c,cpp set foldmethod=indent nofoldenable
 # 设置注释风格
-autocmd FileType java,c,cpp set commentstring=//\ %s
+autocmd FileType c,cpp set commentstring=//\ %s
 
 
 # #############################################################
@@ -39,6 +39,7 @@ autocmd FileType java,c,cpp set commentstring=//\ %s
 # #############################################################
 
 # 为 python 添加注释
+autocmd FileType python set foldmethod=indent nofoldenable
 autocmd FileType python set commentstring=#\ %s
 autocmd FileType python syn keyword pythonDecorator True None False self
 

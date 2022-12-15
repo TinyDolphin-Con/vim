@@ -229,7 +229,7 @@ set textwidth=80
 # 设置不在单词中断行
 set linebreak
 # 带有如下符号的单词不要被换行分割
-set iskeyword+=_,$,@,%,#,-
+set iskeyword+=_,$,@,%,#
 # 打开断行模块支持汉语
 set formatoptions+=mB
 
