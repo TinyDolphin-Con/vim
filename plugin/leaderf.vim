@@ -72,7 +72,7 @@ g:Lf_ShowDevIcons = 1
 # 使用两倍 ASCII 字符的宽度
 set ambiwidth=double
 # 设置缓存路径
-g:Lf_CacheDirectory = expand('~/.vim_runtime/cache')
+g:Lf_CacheDirectory = expand('~/.cache/leaderf')
 
 # 开启弹窗模式
 g:Lf_WindowPosition = 'popup'
