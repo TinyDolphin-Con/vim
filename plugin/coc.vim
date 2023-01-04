@@ -90,20 +90,20 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-# 使用 [g ]g 移动到上一个或下一个诊断
+# 移动到上一个或下一个诊断
 # :CocDiagnostics 可显示当前缓冲区的所有诊断
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>cdp <Plug>(coc-diagnostic-prev)
+nmap <silent> <leader>cdn <Plug>(coc-diagnostic-next)
 
 # goto 代码导航（定义、类型、实现、引用等）
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gtd <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <leader>cd <Plug>(coc-definition)
+nmap <silent> <leader>ctd <Plug>(coc-type-definition)
+nmap <silent> <leader>ci <Plug>(coc-implementation)
+nmap <silent> <leader>cr <Plug>(coc-references)
 
 # 存在问题
 # 显示文档
-nnoremap <silent> gK :call ShowDocumentation()<CR>
+nnoremap <silent> <leader>SD :call ShowDocumentation()<CR>
 
 # help function
 function g:ShowDocumentation()
@@ -135,13 +135,13 @@ augroup mygroup
 augroup end
 
 # 对选中对代码进行操作
-#xmap <leader>a  <Plug>(coc-codeaction-selected)
-#nmap <leader>a  <Plug>(coc-codeaction-selected)
+#xmap <leader>ccs  <Plug>(coc-codeaction-selected)
+#nmap <leader>ccs  <Plug>(coc-codeaction-selected)
 
 # 快速修复代码
-# nmap <leader>ac  <Plug>(coc-codeaction)
-# nmap <leader>qf  <Plug>(coc-fix-current)
-# nmap <leader>cl  <Plug>(coc-codelens-action)
+# nmap <leader>cc  <Plug>(coc-codeaction)
+# nmap <leader>cfc  <Plug>(coc-fix-current)
+# nmap <leader>cca  <Plug>(coc-codelens-action)
 
 # 快速选中整个函数或者类
 # 快速选中整个函数（不包括函数名尾）
