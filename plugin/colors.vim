@@ -23,11 +23,18 @@ vim9script
 # #############################################################
 
 
-# 设置主题
+# 设置主题（透明背景）
 colorscheme gruvbox
+colorscheme habamax
+colorscheme lunaperche
+colorscheme murphy
 # 设置背景透明
 hi Normal ctermfg=252 ctermbg=none
 
+# 设置主题（非透明背景）
+colorscheme habamax
+colorscheme slate
+colorscheme gruvbox
 
 # #############################################################
 # => octol/vim-cpp-enhanced-highlight C++ 语法高亮（增强）
