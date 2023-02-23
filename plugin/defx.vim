@@ -39,7 +39,7 @@ nnoremap <silent><leader>dn :<C-u>Defx
 # 设置文件名栏的宽度
 g:defx#custom#column('filename', {
     'min_width': 10,
-    'max_width': 25,
+    'max_width': 40,
   })
 
 # 图标设置
@@ -64,7 +64,7 @@ g:defx#custom#column('git', 'indicators', {
 # defx 样式设置
 g:defx#custom#option('_', {
   'columns': 'indent:mark:icon:icons:filename:git:size',
-  'winwidth': 40,
+  'winwidth': 50,
   # 'split': 'tab',
   # 'direction': 'botright',
   'show_ignored_files': 0,

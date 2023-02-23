@@ -95,6 +95,7 @@ Plug 'kg8m/vim-simple-align', { 'rev': 'vim9' } # vim 对齐插件
 # Plug 'puremourning/vimspector' # C++ 调试插件
 # plugin/ale.vim
 Plug 'dense-analysis/ale' # 动态语法检测
+Plug 'octol/vim-cpp-enhanced-highlight' # C++ 语法高亮（增强）
 
 # ##### git 管理
 # plugin/git.vim
