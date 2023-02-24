@@ -69,10 +69,10 @@ set guitablabel=%M\ %t
 
 # 快速编辑 init.vim
 map <leader>v :e! ~/.vim_runtime/init.vim<CR>
-# ~/.vim_runtime 目录下任何文件存在修改，即可重新加载配置
+# ~/.vim_runtime 目录下任何文件存在修改，即可重新加载配置（暂时弃用，影响插件使用）
 # echom 输出信息，可通过 :messages 查看
 # redraw 立刻重画屏幕
-autocmd! BufWritePost ~/.vim_runtime/* source ~/.vimrc | echom "Reloaded " .. $MYVIMRC | redraw
+# autocmd! BufWritePost ~/.vim_runtime/* source ~/.vimrc | echom "Reloaded " .. $MYVIMRC | redraw
 
 
 # #############################################################

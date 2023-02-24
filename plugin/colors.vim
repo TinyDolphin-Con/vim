@@ -19,6 +19,7 @@ vim9script
 #
 #  Sections:
 #     -> octol/vim-cpp-enhanced-highlight
+#     -> luochen1990/rainbow
 #
 # #############################################################
 
@@ -56,3 +57,32 @@ g:cpp_experimental_simple_template_highlight = 1
 g:cpp_concepts_highlight = 1
 # 若 Vim 将大括号标记为错误，以下配置可解
 # c_no_curly_error=1
+
+
+# #############################################################
+# => luochen1990/rainbow 彩虹括号
+# #############################################################
+g:rainbow_active = 1
+g:rainbow_conf = {
+	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+	'operators': '_,_',
+	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+	'separately': {
+		'*': {},
+		'tex': {
+			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+		},
+		'lisp': {
+			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+		},
+		'vim': {
+			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+			},
+			'html': {
+				'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|' .. "'" .. '[^' .. "'" .. ']*' .. "'" .. '|[^ ' .. "'" .. '"><=`]*))?)*\>/ end=#</\z1># fold'],
+			},
+			'css': 0,
+			'nerdtree': 0,
+		}
+	}

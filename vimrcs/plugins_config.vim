@@ -63,6 +63,7 @@ Plug 'skywind3000/vim-preview' # 预览窗口
 
 # ##### 颜色主题 plugin/colors.vim
 Plug 'morhetz/gruvbox'
+Plug 'luochen1990/rainbow' # 彩虹括号
 # Plug 'octol/vim-cpp-enhanced-highlight'
 
 # ##### 搜索
