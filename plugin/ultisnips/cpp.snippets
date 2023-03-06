@@ -286,3 +286,41 @@ TEST_CASE("TEST CASE with DEBUG") {
 // g++ -Wall -lpthread -g -std=c++20 -D DEBUG_SWITCH main.cpp -o main && ./main
 // clang -Wall -lstdc++ -lpthread -g -std=c++20 -D DEBUG_SWITCH main.cpp -o main && ./main
 endsnippet
+
+# We want to overwrite everything in parent ft.
+priority -48
+snippet file_comment
+/**
+ * @file 文件名
+ * @brief 文件描述
+ *
+ * 详细的文件描述
+ *
+ * @author 作者
+ * @date 日期
+ */
+endsnippet
+
+# We want to overwrite everything in parent ft.
+priority -48
+snippet class_comment
+/**
+ * @brief 类描述
+ *
+ * 详细的类描述
+ */
+endsnippet
+
+# We want to overwrite everything in parent ft.
+priority -48
+snippet func_comment
+/**
+ * @brief 函数描述
+ * @param[in] 参数名 参数描述
+ * @param[out] 参数名 参数描述
+ * @param[in,out] 参数名 参数描述
+ * @retval 返回值描述
+ * @exception 异常描述
+ * @note 注意事项
+ */
+endsnippet
