@@ -47,7 +47,7 @@ exec 'set rtp+=~/.vim_runtime'
 IncScript vimrcs/basic.vim
 # 加载扩展配置
 IncScript vimrcs/extended.vim
-# 加载文件配置
-IncScript vimrcs/filetypes.vim
 # 加载插件配置
 IncScript vimrcs/plugins_config.vim
+# 加载文件配置
+IncScript vimrcs/filetypes.vim
