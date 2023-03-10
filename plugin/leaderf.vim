@@ -147,21 +147,20 @@ nnoremap <Leader>fch :<C-U><C-R>=printf("Leaderf! rg -e %s -g *.h -g *.cpp -g *.
 
 # leaderf + gtags
 # # 不自动生成 gtags 库
-# g:Lf_GtagsAutoGenerate = 0
+g:Lf_GtagsAutoGenerate = 0
 # # 使用 gutentags 生成的数据库
-# g:Lf_GtagsGutentags = 1
+g:Lf_GtagsGutentags = 1
 # # gutentags 的标签生成目录设置成 leaderf 的标签目录缓存
-# g:gutentags_cache_dir = expand(g:Lf_CacheDirectory .. '\.LfCache\gtags')
+g:gutentags_cache_dir = expand(g:Lf_CacheDirectory .. '/.LfCache/gtags')
 # # 跳转到定义，相当于 g_Ctrl-]，支持模糊搜索和异步执行
-# nnoremap <leader>fgd <Plug>LeaderfGtagsDefinition
+nnoremap <leader>fgd <Plug>LeaderfGtagsDefinition
+vnoremap <leader>fgd <Plug>LeaderfGtagsDefinition
 # # 跳转到引用
-# nnoremap <leader>fgr <Plug>LeaderfGtagsReference
+nnoremap <leader>fgr <Plug>LeaderfGtagsReference
+vnoremap <leader>fgr <Plug>LeaderfGtagsReference
 # # 跳转到符号
-# nnoremap <leader>fgs <Plug>LeaderfGtagsSymbol
+nnoremap <leader>fgs <Plug>LeaderfGtagsSymbol
+vnoremap <leader>fgs <Plug>LeaderfGtagsSymbol
 # # 跳转到匹配
-# nnoremap <leader>fgg <Plug>LeaderfGtagsGrep
-
-# vnoremap <leader>fgr <Plug>LeaderfGtagsReference
-# vnoremap <leader>fgd <Plug>LeaderfGtagsDefinition
-# vnoremap <leader>fgs <Plug>LeaderfGtagsSymbol
-# vnoremap <leader>fgg <Plug>LeaderfGtagsGrep
+nnoremap <leader>fgg <Plug>LeaderfGtagsGrep
+vnoremap <leader>fgg <Plug>LeaderfGtagsGrep
