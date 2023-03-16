@@ -157,6 +157,17 @@ set scrolloff=5
 set fillchars=vert:\ ,stl:\ ,stlnc:\
 
 
+# 快速打开终端
+nnoremap TT :terminal<CR>
+# nnoremap <silent> TT <ScriptCmd>ToggleTerminal()<CR>
+# 快速切换正常模式（可滚动移动）
+tnoremap <Esc> <C-\><C-N>
+# 快速隐藏终端
+tnoremap <leader>h <C-\><C-N>:q<CR>
+# 快速关闭终端
+tnoremap <leader>q <C-\><C-N>:q!<CR>
+
+
 # #############################################################
 # => Colors and Fonts 颜色和字体
 # #############################################################
